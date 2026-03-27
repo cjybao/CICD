@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class VulnerableClass {
 
-    // 高危漏洞：SQL 注入，再次测试
+    // 高危漏洞：SQL 注入，再次测试，再再次测试
     public void vulnerableMethod(String userInput) throws Exception {
         // 假设连接字符串，实际中应从配置获取
         String url = "jdbc:mysql://localhost:3306/test";
