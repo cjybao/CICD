@@ -14,9 +14,7 @@ public class VulnerableClass {
         String username = "root";
         String password = "password";
 
-        // 危险：直接拼接用户输入到 SQL 语句
-        // String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
-        String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
+      
 
         try (Connection conn = DriverManager.getConnection(url, username, password);
              Statement stmt = conn.createStatement();
