@@ -30,6 +30,7 @@ jobs:
         uses: github/codeql-action/init@v3
         with:
           languages: java
+          queries: security-extended
 
       # ⚠️ 关键：必须构建项目，否则 CodeQL 无法分析 Java 代码
       - name: Build with Maven
