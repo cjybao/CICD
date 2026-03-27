@@ -43,7 +43,13 @@ jobs:
       - name: Debug SARIF
         run: |
          cat codeql-results/*.sarif || echo "No sarif file"
-        
+         
+      - name: Upload SARIF for debugging
+        uses: actions/upload-artifact@v4
+        with:
+          name: codeql-sarif
+          path: codeql-results/*.sarif
+        if: always()
       # 解析 SARIF，如果存在高危/严重漏洞则让流水线失败
       - name: Parse SARIF and block on high/critical findings
         id: parse
