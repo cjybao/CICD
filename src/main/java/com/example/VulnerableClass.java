@@ -15,7 +15,7 @@ public class VulnerableClass {
         String password = "password";
 
       
-
+        String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
         try (Connection conn = DriverManager.getConnection(url, username, password);
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
